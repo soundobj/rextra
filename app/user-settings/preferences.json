@@ -1,0 +1,17 @@
+{
+  "areaMode" : "all",
+  "resources" : [
+    {
+      "url" : "nytimes.com",
+      "area" : "0",
+      "id" : "u0"
+    }
+  ],
+  "filteredChannels" : ["3"],
+  "history" : [
+    {
+      "searchQuery" : "Obama+climate+change",
+      "timestamp" : 1432382583362
+    }
+  ]
+}

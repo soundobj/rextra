@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Babel Jspm</title>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('./app/app');
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="SearchQueryCtrl as ctrl" user-text-selection>
+	<div>
+		<h2>My App</h2>
+        <button ng-click="ctrl.deleteTerm(term)">X</button>
+
+        <div contenteditable="true" user-input>
+            <ul ng-sortable="ctrl.sortableItemsConfig">
+                <li ng-repeat="item in ctrl.searchTerms track by $index">{{item}}</li>
+            </ul>
+        </div>
+
+            Albert Einstein was born in Ulm, in the Kingdom of Württemberg in the German Empire on 14 March 1879.[15] His parents were Hermann Einstein, a salesman and engineer, and Pauline Koch. In 1880, the family moved to Munich, where his father and his uncle founded Elektrotechnische Fabrik J. Einstein & Cie, a company that manufactured electrical equipment based on direct current.[15]
+
+            The Einsteins were non-observant Ashkenazi Jews. Albert attended a Catholic elementary school from the age of 5 for three years. At the age of 8, he was transferred to the Luitpold Gymnasium (now known as the Albert Einstein Gymnasium), where he received advanced primary and secondary school education until he left Germany seven years later.[16]
+
+            In 1894, his father's company failed: direct current (DC) lost the War of Currents to alternating current (AC). In search of business, the Einstein family moved to Italy, first to Milan and then, a few months later, to Pavia. When the family moved to Pavia, Einstein stayed in Munich to finish his studies at the Luitpold Gymnasium. His father intended for him to pursue electrical engineering, but Einstein clashed with authorities and resented the school's regimen and teaching method. He later wrote that the spirit of learning and creative thought were lost in strict rote learning. At the end of December 1894, he travelled to Italy to join his family in Pavia, convincing the school to let him go by using a doctor's note.[17] It was during his time in Italy that he wrote a short essay with the title "On the Investigation of the State of the Ether in a Magnetic Field.[18][19]
+
+            In 1895, at the age of 16, Einstein sat the entrance examinations for the Swiss Federal Polytechnic in Zürich (later the Eidgenössische Technische Hochschule ETH). He failed to reach the required standard in the general part of the examination,[20] but obtained exceptional grades in physics and mathematics.[21] On the advice of the principal of the Polytechnic, he attended the Argovian cantonal school (gymnasium) in Aarau, Switzerland, in 1895–96 to complete his secondary schooling. While lodging with the family of Professor Jost Winteler, he fell in love with Winteler's daughter, Marie. (Albert's sister Maja later married Wintelers' son Paul.)[22] In January 1896, with his father's approval, he renounced his citizenship in the German Kingdom of Württemberg to avoid military service.[23] In September 1896, he passed the Swiss Matura with mostly good grades, including a top grade of 6 in physics and mathematical subjects, on a scale of 1–6.[24] Though only 17, he enrolled in the four-year mathematics and physics teaching diploma program at the Zürich Polytechnic. Marie Winteler moved to Olsberg, Switzerland for a teaching post.
+			</div>
+    </div>
+</body>
+</html>

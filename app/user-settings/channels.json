@@ -1,0 +1,94 @@
+{
+  "areas" : {
+    "0" : "background",
+    "1" : "social media",
+    "2" : "news"
+  },
+
+  "defaults": {
+    "searchEngine" : "google.co.uk/search",
+    "searchTerm" : "q"
+  },
+
+  "channels" : [
+    {
+      "name" : "BBC News",
+      "params" : { "sitesearch": "bbc.co.uk" },
+      "area" : "2",
+      "id" : "0"
+    },
+    {
+      "name" : "The Guardian",
+      "params" : { "sitesearch": "guardian.co.uk" },
+      "area" : "2",
+      "id" : "1"
+
+    },
+    {
+      "name" : "Algazeera",
+      "params" : { "sitesearch": "aljazeera.com" },
+      "area" : "2",
+      "id" : "2"
+    },
+    {
+      "name" : "Facebook",
+      "params" : { "sitesearch": "facebook.com" },
+      "area" : "1",
+      "id" : "3"
+    },
+    {
+      "name" : "Twitter",
+      "params" : { "sitesearch": "twitter.com" },
+      "area" : "1",
+      "id" : "4"
+    },
+    {
+      "name" : "The Huffington Post",
+      "params" : { "sitesearch": "huffingtonpost.co.uk" },
+      "area" : "1",
+      "id" : "5"
+    },
+    {
+      "name" : "boingboing",
+      "params" : { "sitesearch": "boingboing.net" },
+      "area" : "1",
+      "id" : "6"
+    },
+    {
+      "name" : "Citizendium",
+      "params" : { "sitesearch": "citizendium.org" },
+      "area" : "0",
+      "id" : "7"
+    },
+    {
+      "name" : "Wikipedia",
+      "params" : { "sitesearch": "wikipedia.org" },
+      "area" : "0",
+      "id" : "8"
+    },
+    {
+      "name" : "Encyclopedia Britannica Online",
+      "params" : { "sitesearch": "britannica.com" },
+      "area" : "0",
+      "id" : "9"
+    },
+    {
+      "name" : "Google Scholar",
+      "searchEngine" : "scholar.google.co.uk/scholar",
+      "area" : "0",
+      "id" : "10"
+    },
+    {
+      "name" : "Google Books",
+      "area" : "0",
+      "params" : { "tbm" : "bks" },
+      "id" : "11"
+    },
+    {
+      "name" : "infoplease",
+      "params" : { "sitesearch": "infoplease" },
+      "area" : "0",
+      "id" : "12"
+    }
+  ]
+}
