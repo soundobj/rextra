@@ -2,3 +2,9 @@
 .idea/*
 jspm_packages/*
 node_modules/*
+
+scrap.html
+
+app/directives/UserInput.js
+
+app/directives/UserInput.js

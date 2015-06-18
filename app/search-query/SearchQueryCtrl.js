@@ -11,6 +11,8 @@ class SearchQueryCtrl {
         this.StringSanitizer = StringSanitizer;
         this.$scope = $scope;
         this.searchTerms = [];
+        this.userInput = [];
+        this.showInputs = [];
 
         $scope.$on('searchTermAdded', (event, args) => {
             this.searchTerms = this.SearchQuery.getTermsAsArray();
@@ -18,7 +20,7 @@ class SearchQueryCtrl {
         });
 
         $scope.$on('userInputAdded', (event, args) => {
-            console.log(`input added`,event,args);
+            console.log(`input added`,args.userInput.innerText);
             this.searchTerms = this.StringSanitizer.splitString(args.userInput.innerText,"\n");
             $scope.$apply();
             console.log(`new search terms:`,this.searchTerms);
@@ -32,8 +34,16 @@ class SearchQueryCtrl {
         }
     }
 
-    deleteTerm(){
+    deleteTerm(term){
         console.log(`called delete term`);
+        this.SearchQuery.deleteTerm(term);
+        this.searchTerms = this.SearchQuery.getTermsAsArray();
+    }
+
+    addTerm(index) {
+        console.log(`adding term ${index}`);
+        this.showInputs[index] = true;
+
     }
 }
 

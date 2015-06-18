@@ -8,6 +8,7 @@
       "akatov/angular-contenteditable": "github:akatov/angular-contenteditable@^0.3.7",
       "angular": "github:angular/bower-angular@^1.4.0",
       "angular-mocks": "github:angular/bower-angular-mocks@^1.4.0",
+      "bootstrap": "github:twbs/bootstrap@^3.3.4",
       "davidchang/ngReact": "github:davidchang/ngReact@^0.1.5",
       "react": "npm:react@^0.14.0-alpha3"
     },
