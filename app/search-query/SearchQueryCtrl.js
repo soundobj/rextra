@@ -11,8 +11,6 @@ class SearchQueryCtrl {
         this.StringSanitizer = StringSanitizer;
         this.$scope = $scope;
         this.searchTerms = [];
-        this.userInput = [];
-        this.showInputs = [];
 
         $scope.$on('searchTermAdded', (event, args) => {
             this.searchTerms = this.SearchQuery.getTermsAsArray();
