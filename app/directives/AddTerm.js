@@ -23,6 +23,7 @@ function AddTerm(SearchQuery){
 
             $scope.showInput = false;
 
+            // toggles the <input> visibility
             $scope.toggle = () => {
 
                 $scope.showInput = ! $scope.showInput;
@@ -41,24 +42,23 @@ function AddTerm(SearchQuery){
             index: '='
         },
 
-        link : (scope,element,attrs) => {
+        link : (scope,element,attr) => {
 
             element.find('input').bind('input',function(e){
 
                 // wait until the user has stopped typing
                 delay(() => {
-                    console.log(`input entered`,scope.index);
-                    var end = element.find('input')[0].value;
-                    console.log(`user input`,end);
-                    //scope.$emit('userInputAdded',{userInput: element[0]});
-                    //sanitizeUserInput(element[0].getElementsByTagName('li'));
 
-                    //scope.$digest();
-                    //console.log(`start end`,
-                    //    SearchQuery.getTermsAsArray(),
-                    //    end);
-                    //start = undefined;
+                    let input = element.find('input')[0];
+                    scope.$emit('userInputAdded',{
+                        userInput: input.value,
+                        insertAfter: scope.index + 1 // insert after the prior element
+                    });
 
+                    // clean up and close the <input>
+                    input.value = "";
+                    scope.showInput = false;
+                    scope.$apply();
 
                 },1500);
             });

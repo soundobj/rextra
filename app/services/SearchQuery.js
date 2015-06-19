@@ -44,6 +44,28 @@ function SearchQuery () {
                 terms.splice(position,0,term);
                 this.setTerms(terms);
             }
+        },
+        /**
+         * Inserts an item in the set to a new position
+         * @param {Object} term -
+         * @param {Number} index - position to instert to
+         */
+        insertInto(term,index) {
+            var terms = this.getTermsAsArray();
+
+            if(!index || isNaN(index) || index < 0) {
+                return;
+            }
+
+            if(terms) {
+                if(terms.length > index) {
+                    terms.splice(index,0,term);
+                } else {
+                    terms.push(term);
+                }
+            }
+
+            this.setTerms(terms);
         }
 	};
 }

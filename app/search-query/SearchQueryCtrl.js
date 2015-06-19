@@ -20,8 +20,9 @@ class SearchQueryCtrl {
         });
 
         $scope.$on('userInputAdded', (event, args) => {
-            console.log(`input added`,args.userInput.innerText);
-            this.searchTerms = this.StringSanitizer.splitString(args.userInput.innerText,"\n");
+
+            this.SearchQuery.insertInto(args.userInput,args.insertAfter);
+            this.searchTerms = this.SearchQuery.getTermsAsArray();
             $scope.$apply();
             console.log(`new search terms:`,this.searchTerms);
         });

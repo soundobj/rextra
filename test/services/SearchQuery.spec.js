@@ -38,6 +38,36 @@ describe('SearchQuery', () => {
 		expect(terms.indexOf("three")).toBe(1);
 	});
 
+	it('inserts an item to a specific position on the Set terms', () => {
+		SearchQuery.setTerms(["one","two","three"]);
+		SearchQuery.insertInto("between",1);
+
+		let terms = SearchQuery.getTermsAsArray();
+		expect(terms.indexOf("between")).toBe(1);
+
+		// pushes to array if index is greater than the size of the array
+		SearchQuery.setTerms(["one"]);
+		SearchQuery.insertInto("between",5);
+
+		terms = SearchQuery.getTermsAsArray();
+		expect(terms.indexOf("between")).toBe(1);
+
+		// ignores incorrect indexes
+		SearchQuery.setTerms(["one"]);
+
+		SearchQuery.insertInto("between",null);
+		terms = SearchQuery.getTermsAsArray();
+		expect(terms.indexOf("between")).toBe(-1);
+
+		SearchQuery.insertInto("between","peter");
+		terms = SearchQuery.getTermsAsArray();
+		expect(terms.indexOf("between")).toBe(-1);
+
+		SearchQuery.insertInto("between",-3);
+		terms = SearchQuery.getTermsAsArray();
+		expect(terms.indexOf("between")).toBe(-1);
+	});
+
 	afterEach(() =>{
 		SearchQuery.clearTerms();
 	});
